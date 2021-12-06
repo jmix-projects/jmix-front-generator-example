@@ -12,6 +12,9 @@
     "test": "echo \"Error: no test specified\" && exit 1",
     "prepublishOnly": "npm run build"
   },
+  "publishConfig": {
+    "access": "public"
+  },
   "author": "Haulmont <info@haulmont.com>",
   "license": "Apache-2.0",
   "dependencies": {
