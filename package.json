@@ -9,7 +9,8 @@
   },
   "scripts": {
     "build": "rimraf dist && tsc && tsc --project tsconfig.declarations.json && node scripts/copy-templates.js",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "prepublishOnly": "npm run build"
   },
   "author": "Haulmont <info@haulmont.com>",
   "license": "Apache-2.0",
