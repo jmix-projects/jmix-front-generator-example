@@ -1,0 +1,29 @@
+{
+  "compilerOptions": {
+    "target": "es2015",
+    "module": "commonjs",
+    "outDir": "./dist",
+    "resolveJsonModule": true,
+    "sourceMap": true,
+    "strict": true,
+    "baseUrl": ".",
+    "esModuleInterop": true
+  },
+  "include": [
+    "src/**/*.ts",
+    "packages/**/index.ts",
+    "custom_types/**/*.ts"
+  ],
+  "exclude": [
+    "src/*/*/template/**",
+    "src/test/generated/**",
+    "src/test/fixtures/**"
+  ],
+  "ts-node": {
+    "compilerOptions": {
+      "paths": {
+        "inquirer": ["custom_types/inquirer"]
+      }
+    }
+  },
+}
