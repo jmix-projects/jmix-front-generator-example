@@ -16,7 +16,7 @@ npm run build
 After build, generator `react-typescript:charts` will be available in `dist` folder and could be 
 used in `gen-jmix-front` by passing folder as argument
 ```bash
-npx gen-jmix-front --custom-generator-paths jmix-generator-example/dist
+npx gen-jmix-front --custom-generator-paths jmix-front-generator-example/dist
 ```
 
 
