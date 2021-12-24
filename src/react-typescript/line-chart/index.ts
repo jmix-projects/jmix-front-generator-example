@@ -1,12 +1,12 @@
-import {componentOptionsConfig} from "@haulmont/jmix-front-generator/lib/common/cli-options";
 import path from "path";
-import {defaultPipeline} from "@haulmont/jmix-front-generator/lib/building-blocks/pipelines/defaultPipeline";
-import {chartComponentQuestions, Answers} from "./answers";
+import {chartComponentQuestions, Answers, getAnswersFromPrompt} from "./answers";
 import {Options} from "./options";
 import {TemplateModel, deriveTemplateModel} from "./template-model";
 import {write} from "./write";
-import {ComponentOptions} from "@haulmont/jmix-front-generator/lib/building-blocks/stages/options/pieces/component";
 import {YeomanGenerator} from "@haulmont/jmix-front-generator/lib/building-blocks/YeomanGenerator";
+import {ComponentOptions} from "@haulmont/jmix-front-generator/lib/building-blocks/stages/options/pieces/component";
+import {defaultPipeline} from "@haulmont/jmix-front-generator/lib/building-blocks/pipelines/defaultPipeline";
+import {componentOptionsConfig} from "@haulmont/jmix-front-generator/lib/common/cli-options";
 
 export class ReactComponentGenerator extends YeomanGenerator {
 
@@ -19,6 +19,7 @@ export class ReactComponentGenerator extends YeomanGenerator {
       templateDir: path.join(__dirname, 'template'),
       questions: chartComponentQuestions,
       stages: {
+        getAnswersFromPrompt,
         deriveTemplateModel,
         write
       }
@@ -26,7 +27,7 @@ export class ReactComponentGenerator extends YeomanGenerator {
   }
 }
 
-const description = 'Empty screen template.';
+const description = 'Line chart';
 const icon = "blank.svg"
 const index = 0;
 
